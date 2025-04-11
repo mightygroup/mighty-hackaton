@@ -9,6 +9,7 @@ class Router {
 
     public function __construct() {
         $this->routes = [
+            new Route("GET", '\/api\/join', [IndexController::class, "join"]),
             new Route("GET", '\/?', [IndexController::class, "index"]),
         ];
     }
