@@ -1,0 +1,6 @@
+# ALLOWED USERS THAT CAN PARTICIPATE
+# THIS HACKATON.
+# ==================================
+
+# Philip Rosenqvist
+b21phiro

@@ -4,14 +4,17 @@ namespace Phro\Web;
 
 class App {
 
-    private const HACKATON_END_DATE = date("2025-04-12");
+    private Router $router;
 
-    function __construct() {
-        
+    public array $request;
+
+    public function __construct() {
+        $this->request = $_SERVER;
+        $this->router = new Router();
     }
 
     public function run(): void {
-        echo "Hello from App!";
+        $this->router->handleRequest($this->request);
     }
 
 }
