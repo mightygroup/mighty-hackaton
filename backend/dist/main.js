@@ -11,15 +11,19 @@ function getEndDate() {
     }
 }
 
-(() => {
-
+function initTimer() {
     // End date.
     const endDate = getEndDate();
-
     // Timer.
     const timerElement = document.getElementById('timer');
     if (timerElement) {
-        new CountDownTimer(timerElement, endDate);
+        const timer = new CountDownTimer(timerElement, endDate);
+        timer.start();
     }
+}
+
+(() => {
+
+    initTimer();
 
 })();
