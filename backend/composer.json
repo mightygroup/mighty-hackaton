@@ -1,0 +1,16 @@
+{
+    "name": "phro/web",
+    "description": "Backend for Mighty Hackaton, developed by Philip Rosenqvist",
+    "autoload": {
+        "psr-4": {
+            "Phro\\Web\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "b21phiro",
+            "email": "philip.rosenqvist@outlook.com"
+        }
+    ],
+    "require": {}
+}
