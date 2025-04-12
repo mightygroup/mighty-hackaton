@@ -1,16 +1,17 @@
 export class CountDownTimer {
+
     _MS_PER_SECOND = 1000;
     _MS_PER_MINUTE = 60 * this._MS_PER_SECOND;
     _MS_PER_HOUR = 60 * this._MS_PER_MINUTE;
     _MS_PER_DAY = 24 * this._MS_PER_HOUR;
 
-    elem = null;
-    endDate = undefined;
-
     _daysLeftDisplay = null;
     _hoursLeftDisplay = null;
     _minutesLeftDisplay = null;
     _secondsLeftDisplay = null;
+
+    elem = null;
+    endDate = undefined;
 
     constructor(elem, endDate) {
         this.elem = elem;
@@ -55,4 +56,5 @@ export class CountDownTimer {
             console.error("Missing timer display elements!");
         }
     }
+
 }
