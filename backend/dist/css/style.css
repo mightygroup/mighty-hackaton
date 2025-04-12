@@ -1,0 +1,95 @@
+:root {
+    --black: #0d0d0d;
+    --white: #f2f2f2;
+    --yellow: #FFF524;
+    --pink: #FF008C;
+    --orange: #FFA600;
+    --blue: #0087FF;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, button {
+    font-family: "Press Start 2P", system-ui;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--yellow);
+}
+
+button {
+    cursor: pointer;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.music-control-button {
+    display: none;
+    background-color: transparent;
+    width: fit-content;
+    height: 3rem;
+    color: var(--yellow);
+    border: 0;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.music-control-button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.is-active.music-control-button {
+    display: inline-flex !important;
+}
+
+
+.logo {
+    text-align: center;
+    width: clamp(4rem, 100%, 36rem);
+}
+
+.logo-large img {
+    width: 100%;
+}
+
+.logo-large .logo-text {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+.logo-text {
+    margin-top: -1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#music {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}

@@ -1,6 +1,7 @@
 "use strict";
 
 import { CountDownTimer } from './js/CountDownTimer.js';
+import { MusicPlayer } from './js/MusicPlayer.js';
 
 function getEndDate() {
     const endDateInput = document.getElementById('endDate');
@@ -12,18 +13,32 @@ function getEndDate() {
 }
 
 function initTimer() {
-    // End date.
     const endDate = getEndDate();
-    // Timer.
     const timerElement = document.getElementById('timer');
-    if (timerElement) {
+    if (!timerElement || !endDate) {
+        console.error("Missing the timer element or the time data!");
+    } else {
         const timer = new CountDownTimer(timerElement, endDate);
         timer.start();
     }
 }
 
+function initMusicPlayer() {
+    const playButtonElement = document.getElementById("play");
+    const muteButtonElement = document.getElementById("mute");
+    const audioElement = document.getElementById("audioPlayer");
+    if (!playButtonElement || !muteButtonElement || !audioElement) {
+        console.error("Missing mute/play music buttons.");
+    } else {
+        const musicPlayer = new MusicPlayer();
+        musicPlayer.setPlayButton(playButtonElement);
+        musicPlayer.setMuteButton(muteButtonElement);
+        musicPlayer.setAudioElement(audioElement);
+    }
+}
+
+// Main.
 (() => {
-
+    initMusicPlayer();
     initTimer();
-
 })();
