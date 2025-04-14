@@ -9,7 +9,7 @@ class Router {
 
     public function __construct() {
         $this->routes = [
-            new Route("GET", '\/api\/join', [IndexController::class, "join"]),
+            new Route("POST", '\/api\/submit', [IndexController::class, "submit"]),
             new Route("GET", '\/?', [IndexController::class, "index"]),
         ];
     }
@@ -36,7 +36,9 @@ class Router {
     }
 
     private function notFound(): void {
-        echo "Error 404";
+        $response = [ "status" => 404, "message" => "Not found!" ];
+        $json = json_encode($response);
+        print_r($json);
     }
 
 }

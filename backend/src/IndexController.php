@@ -14,8 +14,9 @@ class IndexController extends Controller {
         $this->sendHtmlResponse();
     }
 
-    public function join(): void {
-        echo "join!";
+    public function submit(): void {
+        $response = ["status" => 200, "message" => "Hello world!"];
+        print_r(json_encode($response));
     }
 
     private function sendHtmlResponse(): void {

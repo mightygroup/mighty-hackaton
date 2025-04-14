@@ -72,7 +72,7 @@
         </section>
 
         <!-- Theme -->
-        <section aria-label="Theme">
+        <section aria-label="Theme" class="card">
             <h2>Theme</h2>
             <ul>
                 <li>A jump-over-obstacles game.</li>
@@ -81,7 +81,7 @@
         </section>
         
         <!-- Rules -->
-        <section aria-label="Rules">
+        <section aria-label="Rules" class="card">
             <h2>Rules</h2>
             <ol>
                 <li>A game about jumping over obstacles.</li>
@@ -91,17 +91,31 @@
         </section>
 
         <!-- Submit -->
-        <section aria-label="Submition">
+        <section aria-label="Submition" class="card">
             <h2>Submit</h2>
             <ul>
                 <li>Must be a solo project.</li>
                 <li>Submit by providing a link to your GitHub Repo.</li>
                 <li>Must be on time!</li>
             </ul>
-            <a href="#join" title="Click to join" aria-label="Action link">
-                <span>Give it a shot</span>
-                <span>Click to join</span>
-            </a>
+            <form id="form" method="POST" aria-label="Submition form">
+        
+                <label class="input" for="name">Your name</label>
+                <input id="name" type="text" name="name" aria-labeL="Name input">
+                <label class="input-info" for="name">Enter your name</label>
+
+                <label class="input" for="repo">Link to GitHub repo</label>
+                <input id="repo" type="text" name="repo" aria-labeL="Project repo input">
+                <label class="input-info" for="repo">Paste link to the project repo</label>
+
+                <label class="button" for="submit" class="button">
+                    <span>Click here</span>
+                    <span>Submit project</span>
+                </label>
+
+                <input id="submit" type="submit" name="submit" aria-hidden="true">
+
+            </form>
         </section>
 
 

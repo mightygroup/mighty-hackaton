@@ -2,6 +2,7 @@
 
 import { CountDownTimer } from './js/CountDownTimer.js';
 import { MusicPlayer } from './js/MusicPlayer.js';
+import { SubmitForm } from './js/SubmitForm.js';
 
 function getEndDate() {
     const endDateInput = document.getElementById('endDate');
@@ -23,6 +24,15 @@ function initTimer() {
     }
 }
 
+function initSubmitForm() {
+    const formElement = document.getElementById('form');
+    if (!formElement) {
+        console.error("Missing the submit form!");
+    } else {
+        new SubmitForm(formElement);
+    }
+}
+
 function initMusicPlayer() {
     const playButtonElement = document.getElementById("play");
     const muteButtonElement = document.getElementById("mute");
@@ -41,4 +51,5 @@ function initMusicPlayer() {
 (() => {
     initMusicPlayer();
     initTimer();
+    initSubmitForm();
 })();
