@@ -91,6 +91,7 @@
         </section>
 
         <!-- Submit -->
+        <?php if ($hackatonModel->due()): ?>
         <section aria-label="Submition" class="card">
             <h2>Submit</h2>
             <ul>
@@ -117,6 +118,7 @@
 
             </form>
         </section>
+        <?php endif; ?>
 
 
     </main>

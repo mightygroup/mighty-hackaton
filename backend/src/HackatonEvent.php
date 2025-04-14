@@ -7,7 +7,7 @@ use Exception;
 class HackatonEvent {
 
     private const EVENT_ID = '1_80s_jumper';
-    private const END_DATE = "2025-04-16 19:00";
+    private const END_DATE = "2025-04-15 19:00";
 
     public function __construct() {}
 
@@ -16,15 +16,29 @@ class HackatonEvent {
     }
 
     public function saveSubmition(string $name, string $repoURL): bool {
-        $cleanName = filter_var($name);
-        $cleanRepo = filter_var($repoURL);
-        $content = $cleanName . "          " . $cleanRepo."\n";
-        try {
-            $this->saveFile($content);
-            return true;
-        } catch(Exception $exception) {
+        if (!$this->withinTime()) {
             return false;
+        } else {
+            $cleanName = filter_var($name);
+            $cleanRepo = filter_var($repoURL);
+            $content = $cleanName . "          " . $cleanRepo."\n";
+            try {
+                $this->saveFile($content);
+                return true;
+            } catch(Exception $exception) {
+                return false;
+            }
         }
+    }
+
+    public function due(): bool {
+        return $this->withinTime();
+    }
+
+    private function withinTime(): bool {
+        $today = time();
+        $due = strtotime(self::END_DATE);
+        return ($today <= $due);
     }
 
     private function saveFile(string& $content) {

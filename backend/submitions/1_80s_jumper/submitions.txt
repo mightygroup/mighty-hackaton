@@ -3,3 +3,9 @@
 ===================================================================================================
 Name                 | Repo                                                           
 Angie Gray                 https://github.com/b21phiro/mighty-hackaton/tree/main/backend
+Angie Gray          https://github.com/b21phiro/mighty-hackaton/tree/main/backend
+Philip          https://github.com/b21phiro/mighty-hackaton
+Philip          https://github.com/b21phiro/mighty-hackaton
+Philip          https://github.com/b21phiro/mighty-hackaton
+Philip          https://github.com/b21phiro/mighty-hackaton
+Philip          https://github.com/b21phiro/mighty-hackaton
