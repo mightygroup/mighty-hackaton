@@ -5,6 +5,7 @@
     --pink: #FF008C;
     --orange: #FFA600;
     --blue: #0087FF;
+    --green: #21D535;
 }
 
 *,
@@ -167,10 +168,6 @@ main {
     font-size: 1.5rem;
 }
 
-.button:hover span:first-child {
-    animation: blink 1s step-start infinite;
-}
-
 .button:hover span:last-child {
     text-decoration: underline;
 }
@@ -198,4 +195,27 @@ input[type="text"].has-error {
 
 input[type="text"].has-error + .input-info {
     opacity: 1;
+}
+
+#form.is-loading > .button span:first-child,
+.button:hover span:first-child {
+    animation: blink 1s step-start infinite;
+}
+
+#form.has-error > .button:hover span:first-child,
+#form.has-sent > .button:hover span:first-child {
+    animation: none !important;
+}
+
+#form.is-loading > .button {
+    border-color: #CCC;
+}
+
+#form.has-sent > .button {
+    border-color: var(--green);   
+}
+
+
+#form.has-error > .button {
+    border-color: var(--pink);
 }

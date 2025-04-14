@@ -2,6 +2,8 @@
 
 namespace Phro\Web;
 
+use Exception;
+
 class IndexController extends Controller {
 
     protected HackatonEvent $hackatonEvent;
@@ -15,8 +17,40 @@ class IndexController extends Controller {
     }
 
     public function submit(): void {
-        $response = ["status" => 200, "message" => "Hello world!"];
-        print_r(json_encode($response));
+        $name = (isset($_POST['name'])) ? $_POST['name'] : "";
+        $repo = (isset($_POST['repo'])) ? $_POST['repo'] : "";
+        if (!$this->validateInput('name', $name) || !$this->validateInput('repo', $repo)) {
+            print_r(value: json_encode(["status" => 400, "message" => "Bad input!"]));
+        } else {
+            try {
+                $this->saveSubmitionToFile($name, $repo);
+                print_r(value: json_encode(["status" => 200, "message" => "Thanks!"]));
+            } catch(Exception $exception) {
+                print_r(value: json_encode(["status" => 500, "message" => "Failed saving submition!"]));
+            }
+        }
+    }
+
+    private function saveSubmitionToFile(string $name, string $repo): void {
+
+    }
+
+    private function validateInput(string $type, string $value): bool {
+        if ($type === 'name') {
+            if (strlen($value) < 1) {
+                return false;
+            }
+        } else if ($type === 'repo') {
+            $pattern = '/^https:\/\/github\.com/';
+            $matches = null;
+            preg_match($pattern, $value, $matches);
+            if (count($matches) < 1) {
+                return false;
+            }
+        } else {
+            return false;
+        }
+        return true;
     }
 
     private function sendHtmlResponse(): void {
