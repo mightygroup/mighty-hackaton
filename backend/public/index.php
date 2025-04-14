@@ -7,39 +7,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mighty Hackaton</title>
+    <link rel="icon" type="image/x-icon" href="/mighty-hackaton/backend/public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/dist/css/style.css" >
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/dist/css/timer.css" >
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/style.css" >
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/musicPlayer.css" >
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/timer.css" >
 </head>
 <body>
 
     <header>
 
-        <!-- Logotype -->
-        <div class="logo logo-large" aria-label="Logotype">
-            <img src="/mighty-hackaton/backend/dist/images/mighty-firebird.svg" alt="Mighty" />
-            <h1 class="logo-text">Hackaton</h1>
-        </div>
-
         <!-- Music controls -->
         <section id="music" aria-label="Music controls">
             <!-- Play -->
             <button id="play" class="music-control-button is-active" title="Play music" aria-label="Play music button">
-                <img src="/mighty-hackaton/backend/dist/images/sound_on.gif" alt="Sound on" />
+                <img src="/mighty-hackaton/backend/public/images/sound_on.gif" alt="Sound on" />
                 <span>Play</span>
             </button>
             <!-- Mute -->
             <button id="mute" class="music-control-button" title="Mute music" aria-label="Mute music button">
-                <img src="/mighty-hackaton/backend/dist/images/sound_off.gif" alt="Sound off" />
+                <img src="/mighty-hackaton/backend/public/images/sound_off.gif" alt="Sound off" />
                 <span>Mute</span>
             </button>
             <!-- Audio player -->
             <audio id="audioPlayer" aria-hidden="true" autoplay>
-                <source src="/mighty-hackaton/backend/dist/sound/MightyOutrun-84_.mp3" type="audio/mp3">
+                <source src="/mighty-hackaton/backend/public/sound/MightyOutrun-84_.mp3" type="audio/mp3">
             </audio>
         </section>
+
+        <!-- Logotype -->
+        <div class="logo logo-large" aria-label="Logotype">
+            <img src="/mighty-hackaton/backend/public/images/mighty-firebird.svg" alt="Mighty" />
+            <h1 class="logo-text">Hackaton</h1>
+        </div>
 
     </header>
 
@@ -77,6 +79,7 @@
             <ul>
                 <li>A jump-over-obstacles game.</li>
                 <li>Strive for 80’s GFX or retro.</li>
+                <li>Can be 2D/3D or both!</li>
             </ul>
         </section>
         
@@ -127,7 +130,7 @@
 
         <!-- Logotype -->
         <div class="logo" aria-label="Logotype">
-            <img src="/mighty-hackaton/backend/dist/images/mighty-firebird.svg" alt="Mighty" />
+            <img src="/mighty-hackaton/backend/public/images/mighty-firebird.svg" alt="Mighty" />
             <h4 class="logo-text">Hackaton</h4>
         </div>
     </footer>
@@ -139,6 +142,6 @@
         }
     ?>
 
-    <script src="/mighty-hackaton/backend/dist/main.js" type="module"></script>
+    <script src="/mighty-hackaton/backend/public/main.js" type="module"></script>
 </body>
 </html>

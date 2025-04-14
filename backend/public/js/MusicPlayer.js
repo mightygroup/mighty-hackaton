@@ -9,6 +9,11 @@ export class MusicPlayer {
 
     constructor() {}
 
+    init() {
+        this._FLAG_IS_PLAYING != this._audio.paused;
+        this._updateState();
+    }
+
     setPlayButton(button) {
         this._playButton = button;
         this._playButton.addEventListener('click', this.play.bind(this));

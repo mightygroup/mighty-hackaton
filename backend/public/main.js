@@ -44,6 +44,7 @@ function initMusicPlayer() {
         musicPlayer.setPlayButton(playButtonElement);
         musicPlayer.setMuteButton(muteButtonElement);
         musicPlayer.setAudioElement(audioElement);
+        musicPlayer.init();
     }
 }
 

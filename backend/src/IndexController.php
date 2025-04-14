@@ -55,7 +55,7 @@ class IndexController extends Controller {
     private function getHtmlDocument(): string {
         $hackatonEvent = $this->hackatonEvent;
         ob_start();
-        include __DIR__ . "/../dist/index.php";
+        include __DIR__ . "/../public/index.php";
         $html = ob_get_clean();
         return $html;
     }
