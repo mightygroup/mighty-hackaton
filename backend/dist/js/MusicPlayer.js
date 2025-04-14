@@ -58,7 +58,7 @@ export class MusicPlayer {
     }
 
     _skipToCoolPart() {
-        this._audio.currentTime += 29;
+        this._audio.currentTime += 29.5;
     }
 
 }

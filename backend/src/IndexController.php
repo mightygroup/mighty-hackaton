@@ -23,18 +23,13 @@ class IndexController extends Controller {
             print_r(value: json_encode(["status" => 400, "message" => "Bad input!"]));
         } else {
             try {
-                $this->saveSubmitionToFile($name, $repo);
+                $this->hackatonEvent->saveSubmition($name, $repo);
                 print_r(value: json_encode(["status" => 200, "message" => "Thanks!"]));
             } catch(Exception $exception) {
                 print_r(value: json_encode(["status" => 500, "message" => "Failed saving submition!"]));
             }
         }
     }
-
-    private function saveSubmitionToFile(string $name, string $repo): void {
-
-    }
-
     private function validateInput(string $type, string $value): bool {
         if ($type === 'name') {
             if (strlen($value) < 1) {
