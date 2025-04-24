@@ -45,6 +45,7 @@ class HackatonEvent {
         $dir = __DIR__.'/../submitions/'.self::EVENT_ID;
         if (!file_exists($dir)) {
             $result = mkdir($dir, 0777, true);
+   
             if ($result === false) {
                 throw new Exception("Failed to create submitions directory!");
             }

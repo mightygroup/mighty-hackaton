@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mighty Hackaton</title>
-    <link rel="icon" type="image/x-icon" href="/mighty-hackaton/backend/public/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?= Phro\Web\App::$BASE_FOLDER ?>/public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/musicPlayer.css">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/timer.css">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/logo.css">
+    <link rel="stylesheet" type="text/css" href="<?= Phro\Web\App::$BASE_FOLDER ?>/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?= Phro\Web\App::$BASE_FOLDER ?>/public/css/musicPlayer.css">
+    <link rel="stylesheet" type="text/css" href="<?= Phro\Web\App::$BASE_FOLDER ?>/public/css/timer.css">
+    <link rel="stylesheet" type="text/css" href="<?= Phro\Web\App::$BASE_FOLDER ?>/public/css/logo.css">
 </head>
 <body>
 
@@ -24,17 +24,17 @@
         <section id="music" aria-label="Music controls">
             <!-- Play -->
             <button id="play" class="music-control-button is-active" title="Play music" aria-label="Play music button">
-                <img src="/mighty-hackaton/backend/public/images/sound_on.gif" alt="Sound on" />
+                <img src="<?= Phro\Web\App::$BASE_FOLDER ?>/public/images/sound_on.gif" alt="Sound on" />
                 <span>Play</span>
             </button>
             <!-- Mute -->
             <button id="mute" class="music-control-button" title="Mute music" aria-label="Mute music button">
-                <img src="/mighty-hackaton/backend/public/images/sound_off.gif" alt="Sound off" />
+                <img src="<?= Phro\Web\App::$BASE_FOLDER ?>/public/images/sound_off.gif" alt="Sound off" />
                 <span>Mute</span>
             </button>
             <!-- Audio player -->
             <audio id="audioPlayer" aria-hidden="true" autoplay>
-                <source src="/mighty-hackaton/backend/public/sound/MightyOutrun-84_.mp3" type="audio/mp3">
+                <source src="<?= Phro\Web\App::$BASE_FOLDER ?>/public/sound/MightyOutrun-84_.mp3" type="audio/mp3">
             </audio>
         </section>
 
@@ -144,6 +144,6 @@
         }
     ?>
 
-    <script src="/mighty-hackaton/backend/public/main.js" type="module"></script>
+    <script src="<?= Phro\Web\App::$BASE_FOLDER ?>/public/main.js" type="module"></script>
 </body>
 </html>

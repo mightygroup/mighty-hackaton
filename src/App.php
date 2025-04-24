@@ -3,10 +3,9 @@
 namespace Phro\Web;
 
 class App {
-
     private Router $router;
-
     public array $request;
+    public static string $BASE_FOLDER = "/mighty-hackaton-1";
 
     public function __construct() {
         $this->request = $_SERVER;

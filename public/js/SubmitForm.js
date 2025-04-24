@@ -81,7 +81,7 @@ export class SubmitForm {
             this._disableFormInputs();
             if (onLoad) onLoad();
             const post = async (data) => {
-                const url = 'http://localhost/mighty-hackaton/backend/api/submit';
+                const url = 'api/submit';
                 return fetch(url, {
                     method: 'POST',
                     body: data,

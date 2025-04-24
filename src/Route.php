@@ -35,7 +35,8 @@ class Route {
     }
 
     private function isPath(string $subject): bool {
-        $pattern = '/^\/mighty-hackaton\/backend'.$this->path.'$/';
+        $base = preg_replace('/\//', '\/',App::$BASE_FOLDER);
+        $pattern = '/^'.$base.$this->path.'$/';
         $matches = null;
         preg_match($pattern, $subject, $matches);
         return count($matches) > 0;
