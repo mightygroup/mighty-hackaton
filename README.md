@@ -64,3 +64,7 @@ The application uses a custom routing system and follows a simple MVC-like patte
 
 - **Philip Rosenqvist** - Frontend Developer at Mighty Group
 - GitHub: [b21phiro](https://github.com/b21phiro)
+
+## Credits
+
+- **Rickard Kling** - Frontend Developer and composer of "MightyOutrun-84.mp3"
