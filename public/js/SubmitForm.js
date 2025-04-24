@@ -76,7 +76,6 @@ export class SubmitForm {
 
     _send(data, onSuccess, onError, onLoad) {
         if (!this._sending) {
-            console.log("Sending...");
             this._sending = true;
             this._disableFormInputs();
             if (onLoad) onLoad();
