@@ -1,5 +1,7 @@
 # Mighty Hackaton Website
 
+![Mighty Firebird](public/images/mighty-firebird.svg)
+
 A web application for managing and showcasing hackathon submissions. This platform serves as a central hub for the Mighty Hackaton event, providing a way to display and manage participant submissions.
 
 ## Overview
