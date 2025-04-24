@@ -39,6 +39,7 @@ export class SubmitForm {
     }
 
     _sent() {
+        this._sending = false;
         this._form.classList.remove('has-error');
         this._form.classList.remove('is-loading');
         this._form.classList.add('has-sent');
@@ -75,6 +76,7 @@ export class SubmitForm {
 
     _send(data, onSuccess, onError, onLoad) {
         if (!this._sending) {
+            console.log("Sending...");
             this._sending = true;
             this._disableFormInputs();
             if (onLoad) onLoad();
@@ -106,7 +108,6 @@ export class SubmitForm {
                     }, 2000);
                 })
                 .finally(() => {
-                    this._sending = false;
                     this._enableFormInputs();
                 });
         }

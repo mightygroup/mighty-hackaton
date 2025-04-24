@@ -61,26 +61,6 @@ main {
     padding-inline: 1rem;
 }
 
-
-.logo {
-    text-align: center;
-    width: clamp(4rem, 100%, 36rem);
-}
-
-.logo-large img {
-    width: 100%;
-}
-
-.logo-large .logo-text {
-    font-size: clamp(2rem, 4.5vw, 4rem);
-}
-
-.logo-text {
-    margin-top: -1rem;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
 .card {
     display: flex;
     flex-direction: column;

@@ -7,7 +7,7 @@ use Exception;
 class HackatonEvent {
 
     private const EVENT_ID = '1_80s_jumper';
-    private const END_DATE = "2025-04-15 19:00";
+    private const END_DATE = "2025-05-30 19:00";
 
     public function __construct() {}
 
@@ -42,23 +42,28 @@ class HackatonEvent {
     }
 
     private function saveFile(string& $content) {
-        $dir = './submitions/'.self::EVENT_ID;
-        if (!file_exists(filename: $dir)) {
-            mkdir($dir, 0777, true);
+        $dir = __DIR__.'/../submitions/'.self::EVENT_ID;
+        if (!file_exists($dir)) {
+            $result = mkdir($dir, 0777, true);
+            if ($result === false) {
+                throw new Exception("Failed to create submitions directory!");
+            }
         }
         $file = $dir . '/submitions.txt';
         if (!file_exists($file)) {
             $body = "===================================================================================================\n"
                   . "                             MIGHTY HACKATON ".self::END_DATE . "                                  \n"
                   . "===================================================================================================\n"
-                  ."Name          | Repo                                                                                \n"
                   . $content;
             ;
         } else {
             $body = file_get_contents($file);
             $body .= $content;
         }
-        file_put_contents($file, $body);
+        $result = file_put_contents($file, $body);
+        if ($result === false) {
+            throw new Exception("Failed to save submition!");
+        }
     }
 
 }

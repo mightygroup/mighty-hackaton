@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/style.css" >
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/musicPlayer.css" >
-    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/timer.css" >
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/musicPlayer.css">
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/timer.css">
+    <link rel="stylesheet" type="text/css" href="/mighty-hackaton/backend/public/css/logo.css">
 </head>
 <body>
 
@@ -39,7 +40,7 @@
 
         <!-- Logotype -->
         <div class="logo logo-large" aria-label="Logotype">
-            <img src="/mighty-hackaton/backend/public/images/mighty-firebird.svg" alt="Mighty" />
+            <div class="logo-firebird cursor-gradient"></div>
             <h1 class="logo-text">Hackaton</h1>
         </div>
 
@@ -49,6 +50,7 @@
         
         <!-- Timer -->
         <section id="timer">
+            <div class="cursor-gradient"></div>
             <h3>Time left</h3>
             <div class="timer-body">
                 <p class="timer-body-col">
@@ -130,7 +132,7 @@
 
         <!-- Logotype -->
         <div class="logo" aria-label="Logotype">
-            <img src="/mighty-hackaton/backend/public/images/mighty-firebird.svg" alt="Mighty" />
+            <div class="logo-firebird cursor-gradient"></div>
             <h4 class="logo-text">Hackaton</h4>
         </div>
     </footer>
