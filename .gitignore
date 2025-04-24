@@ -1,2 +1,6 @@
 /vendor/
 /submitions
+.DS_Store
+.vscode
+.env
+.idea
